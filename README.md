@@ -40,4 +40,5 @@ Be sure to first run a `npm bower install` to get the required libraries. Now si
 Change the class `equals` to any class you want to use (see [States](#states))
 
 ## Issues
-Play and pause button are a bit funky. Need to find a way to display them without border attributes.
+* Play and pause button are a bit funky. Need to find a way to display them without border attributes.
+* Changing the scale in Chrome first changes the icon-container (blue circle) and the icon after that.
