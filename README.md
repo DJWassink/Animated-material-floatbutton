@@ -4,6 +4,9 @@ A floating round material button that has animations between states.
 ## Screenshot animation
 ![Animation](screenshot.gif)
 
+## Demo
+[Click here](http://button.dirkjanwassink.nl)
+
 ## States
 Currently the following icons/states are supported:
 * equals
@@ -22,7 +25,7 @@ Currently the following icons/states are supported:
 * arrow-up
 
 ## Usage
-Be sure to first run a `npm bower install` to get the required libraries. Now simply use the following snippit:
+Be sure to first run a `npm bower install` to get the required libraries. Now simply use the following snippet:
 
 ```
 <div class="icon-container" data-ripple-color="#ffffff">
@@ -34,7 +37,7 @@ Be sure to first run a `npm bower install` to get the required libraries. Now si
 </div>
 ```
 
-Change the class `equals` to any class you want to use (see States);
+Change the class `equals` to any class you want to use (see [States](#states))
 
 ## Issues
 Play and pause button are a bit funky. Need to find a way to display them without border attributes.

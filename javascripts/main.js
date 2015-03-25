@@ -1,5 +1,17 @@
 $(document).ready(function () {
+    var animations = ['equals', 'pause', 'check', 'arrow-left', 'min', 'stop', 'cross', 'arrow-right', 'close', 'arrow-down', 'hamburger', 'search', 'play', 'arrow-up'];
     var animationIndex = 1;
+
+    animations.forEach(function(animation) {
+        $('#controls').append('<button class="icon-switcher" data-icon="' + animation + '">' + animation + '</button>');
+    });
+
+    $(document).on('click','.icon-switcher', function() {
+        var animation = $(this).data('icon');
+        console.log(animation);
+        $('.icon-holder').removeClass().addClass('icon-holder ' + animation);
+    });
+
     $('.icon-container').on('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
@@ -10,7 +22,6 @@ $(document).ready(function () {
 
         $holder.removeClass().addClass('icon-holder');
 
-        var animations = ['equals', 'pause', 'check', 'arrow-left', 'min', 'stop', 'cross', 'arrow-right', 'close', 'arrow-down', 'hamburger', 'search', 'play', 'arrow-up'];
 
         $holder.addClass(animations[animationIndex]);
         animationIndex++;
