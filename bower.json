@@ -1,0 +1,22 @@
+{
+  "name": "MaterialIcon",
+  "version": "0.0.1",
+  "authors": [
+    "Dirk-Jan Wassink <dirk.jan.wassink@gmail.com>"
+  ],
+  "description": "A simple material icon animation implementation",
+  "main": "main.js",
+  "license": "MIT",
+  "homepage": "dirkjanwassink.nl",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "bootstrap-material-design": "~0.3.0"
+  }
+}
