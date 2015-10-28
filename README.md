@@ -25,6 +25,9 @@ Currently the following icons/states are supported:
 * arrow-up
 
 ## Usage
+Either download/clone this repo or install it with bower:
+`bower install animated-material-floatbutton`
+
 Simply use the following snippet:
 
 ```
