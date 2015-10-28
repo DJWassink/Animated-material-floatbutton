@@ -1,0 +1,257 @@
+//colors
+$blue: #2196f3
+$white: white
+
+//normal state
+.animated-material-fab
+  top: .2em
+  left: .2em
+  position: relative
+  background: $blue
+  border-radius: 50%
+  width: 5em
+  height: 5em
+  cursor: pointer
+  font-size: 15px
+  transition: all 250ms cubic-bezier(0.4, 0, 1, 1)
+  overflow: hidden
+
+  //animation for closing
+  &.closing
+    width: 0
+    height: 0
+    opacity: 0
+    margin-left: 2.5em
+    margin-top: 2.5em
+    >.icon-holder
+      padding: 0
+      >.bar1
+        width: 0
+        transform: none
+        opacity: 0
+        margin: 0
+
+      >.bar2
+        width: 0
+        transform: none
+        opacity: 0
+        margin: 0
+
+      >.bar3
+        width: 0
+        transform: none
+        opacity: 0
+        margin: 0
+
+  .icon-holder
+    transition: all 250ms cubic-bezier(0.4, 0, 1, 1)
+    padding: 1.45em 1.5em
+
+  .icon-bar
+    border: transparent
+    width: 2em
+    height: .3em
+    background: $white
+    transition: all 250ms cubic-bezier(0.4, 0, 1, 1)
+    position: absolute
+
+  .bar1
+    margin: .9em 0
+
+  .bar2
+    margin: .9em 0
+
+  .bar3
+    margin: .9em 0
+
+  //animation bars down here
+  .hamburger>
+    .bar1
+      margin: .3em 0
+
+    .bar3
+      margin: 1.5em 0
+
+  .cross>
+    .bar1
+      transform: rotate(90deg)
+
+    .bar3
+      opacity: 0
+      transform: rotate(-90deg)
+
+
+  .close>
+    .bar1
+      transform: rotate(45deg)
+
+    .bar2
+      transform: rotate(-45deg)
+
+    .bar3
+      opacity: 0
+      transform: rotate(45deg)
+
+
+  .arrow-left>
+    .bar1
+      width: 1.5em
+      margin: .47em 0 0 -.33em
+      transform: rotate(-45deg)
+
+    .bar2
+      transform: none
+
+    .bar3
+      margin: 1.33em 0 0 -.33em
+      width: 1.5em
+      transform: rotate(45deg)
+
+
+  .arrow-right>
+    .bar1
+      width: 1.5em
+      margin: .47em 0 0 .8em
+      transform: rotate(45deg)
+
+    .bar2
+      transform: none
+
+    .bar3
+      margin: 1.33em 0 0 .8em
+      width: 1.5em
+      transform: rotate(-45deg)
+
+
+  .arrow-up>
+    .bar1
+      width: 1.5em
+      margin: .3em 0 0 -.18em
+      transform: rotate(-45deg)
+
+    .bar2
+      transform: rotate(90deg)
+
+    .bar3
+      margin: .3em 0 0 .68em
+      width: 1.5em
+      transform: rotate(45deg)
+
+
+  .arrow-down>
+    .bar1
+      width: 1.5em
+      margin: 1.5em 0 0 -.18em
+      transform: rotate(45deg)
+
+    .bar2
+      transform: rotate(90deg)
+
+    .bar3
+      margin: 1.5em 0 0 .68em
+      width: 1.5em
+      transform: rotate(-45deg)
+
+
+  .check>
+    .bar1
+      width: 1em
+      margin: 1.1035em 0 0 0
+      transform: rotate(45deg)
+
+    .bar2
+      opacity: 0
+
+    .bar3
+      margin: .9em 0 0 0.5em
+      transform: rotate(-45deg)
+
+
+  .pause>
+    .bar1
+      margin: .8em 0 0 .5em
+      height: .5em
+      transform: rotate(90deg)
+
+    .bar2
+      opacity: 0
+
+    .bar3
+      margin: .8em 0 0 -.5em
+      height: .5em
+      transform: rotate(90deg)
+
+
+  .stop>
+    .bar1
+      margin: .6em 0 0 .5em
+      height: 1em
+      transform: rotate(90deg)
+
+    .bar2
+      opacity: 0
+
+    .bar3
+      margin: .6em 0 0 -.5em
+      height: 1em
+      transform: rotate(90deg)
+
+
+  .play>
+    .bar1
+      margin: 0 0 0 .3em
+      height: 0
+      width: 3em
+      background: transparent
+      border-top: 1em solid transparent
+      border-left: 2em solid $white
+
+    .bar2
+      opacity: 0
+
+    .bar3
+      margin: 1em 0 0 .3em
+      height: 0
+      width: 3em
+      background: transparent
+      border-bottom: 1em solid transparent
+      border-left: 2em solid $white
+
+
+  .search>
+    .bar1
+      margin: 0
+      width: 2em
+      height: 2em
+      border-radius: 50%
+      background: transparent
+      border: .2em solid $white
+      box-sizing: border-box
+
+    .bar2
+      opacity: 0
+
+    .bar3
+      width: .8em
+      height: .2em
+      margin: 2em 0 0 -.4em
+      transform: rotate(-45deg)
+
+
+  .equals>
+    .bar1
+      margin: .5em 0 0 0
+
+    .bar2
+      opacity: 0
+
+    .bar3
+      margin: 1.3em 0 0 0
+
+
+  .min>
+    .bar2
+      opacity: 0
+
+    .bar3
+      opacity: 0

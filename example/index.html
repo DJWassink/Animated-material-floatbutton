@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Material icons</title>
+    <link rel="stylesheet" href="./bower_components/simple-ripple/dist/ripple.min.css">
+    <link rel="stylesheet" type="text/css" href="../dist/amf.min.css">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family:'verdana';
+            background: #B6B6B6;
+        }
+        #controls {
+            background: #BBDEFB;
+            padding: 15px;
+        }
+        button {
+            border:none;
+            border-radius: 2px;
+            padding: 8px 10px;
+            margin: 2px;
+            background: #1976D2;
+            color: white;
+            transition: all .35s ease;
+        }
+        button:hover {
+            cursor: pointer;
+            background:#03A9F4;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="controls">
+    <label>
+        Size (px) / 5:
+        <input id="icon-size" type="number" value="15">
+    </label>
+    <button type="text" id="toggle-icon">Toggle visibility</button>
+    </div>
+    
+    <div class="animated-material-fab ripple">
+        <div class="icon-holder equals">
+            <div class="icon-bar bar1"></div>
+            <div class="icon-bar bar2"></div>
+            <div class="icon-bar bar3"></div>
+        </div>
+    </div>
+
+</body>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="./bower_components/simple-ripple/dist/ripple.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var animations = ['equals', 'pause', 'check', 'arrow-left', 'min', 'stop', 'cross', 'arrow-right', 'close', 'arrow-down', 'hamburger', 'search', 'play', 'arrow-up'];
+        var animationIndex = 1;
+
+        animations.forEach(function(animation) {
+            $('#controls').append('<button class="icon-switcher" data-icon="' + animation + '">' + animation + '</button>');
+        });
+
+        $(document).on('click','.icon-switcher', function() {
+            var animation = $(this).data('icon');
+            console.log(animation);
+            $('.icon-holder').removeClass().addClass('icon-holder ' + animation);
+        });
+
+        $('.animated-material-fab').on('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            var $clickedElement = $(this);
+
+            var $holder = $clickedElement.find('.icon-holder');
+
+            $holder.removeClass().addClass('icon-holder');
+
+
+            $holder.addClass(animations[animationIndex]);
+            animationIndex++;
+            if (animationIndex === animations.length) animationIndex = 0;
+        });
+
+        $('#icon-size').on('change', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            var size = parseInt($(this).val());
+            $('.animated-material-fab').css('fontSize', size + 'px');
+        });
+
+        $('#toggle-icon').on('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            $('.animated-material-fab').toggleClass('closing');
+        });
+
+        //start ripple
+        initSimpleRipple();
+    });
+</script>
+</html>

@@ -1,11 +1,11 @@
 {
-  "name": "MaterialIcon",
+  "name": "AnimatedMaterialFloatbutton",
   "version": "0.0.1",
   "authors": [
     "Dirk-Jan Wassink <dirk.jan.wassink@gmail.com>"
   ],
   "description": "A simple material icon animation implementation",
-  "main": "main.js",
+  "main": "index.html",
   "license": "MIT",
   "homepage": "dirkjanwassink.nl",
   "ignore": [
@@ -16,7 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~2.1.3",
-    "bootstrap-material-design": "~0.3.0"
-  }
+    "simple-ripple": "~1.0.0"
+  },
+  "moduleType": []
 }
