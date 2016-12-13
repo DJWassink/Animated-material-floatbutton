@@ -1,8 +1,8 @@
 {
   "name": "animated-material-button",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A floating round material button that has animations between states.",
-  "main": "dist/amf.min.css",
+  "main": "build/amf.min.css",
   "directories": {
     "example": "example"
   },
@@ -15,7 +15,7 @@
   },
   "scripts": {
     "prepublish": "npm run build",
-    "build": "rm -rf ./dist && ./node_modules/.bin/gulp"
+    "build": "rm -rf ./build && ./node_modules/.bin/gulp"
   },
   "repository": {
     "type": "git",

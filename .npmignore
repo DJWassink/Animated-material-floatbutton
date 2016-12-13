@@ -1,0 +1,11 @@
+src/
+tests/
+.idea
+node_modules
+example
+npm-debug.log
+yarn-error.log
+.babelrc
+.travis.yml
+karma.config.js
+mocha.config.js

@@ -6,14 +6,14 @@ var rename = require('gulp-rename');
 gulp.task('sass', function () {
     return gulp.src('./src/*.sass')
       .pipe(sass().on('error', sass.logError))
-      .pipe(gulp.dest('./dist'));
+      .pipe(gulp.dest('./build'));
 });
 
 gulp.task('clean-css', ['sass'], function() {
-    return gulp.src('./dist/*.css')
+    return gulp.src('./build/*.css')
       .pipe(cleanCss({compatibility: 'ie8'}))
       .pipe(rename({suffix: '.min'}))
-      .pipe(gulp.dest('./dist'))
+      .pipe(gulp.dest('./build'))
 });
 
 gulp.task('watch', function () {

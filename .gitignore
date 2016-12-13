@@ -31,4 +31,4 @@ bower_components
 .sass-cache
 .idea
 
-dist
+build
