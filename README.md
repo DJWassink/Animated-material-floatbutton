@@ -26,8 +26,8 @@ Currently the following icons/states are supported:
 
 ## Usage
 Either download/clone this repo or install it with yarn/npm or bower:<br>
-`yarn add animated-material-floatbutton`<br>
-`npm i animated-material-floatbutton -S`<br>
+`yarn add animated-material-button`<br>
+`npm i animated-material-button -S`<br>
 `bower install animated-material-floatbutton`
 
 Simply use the following snippet:
