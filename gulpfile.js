@@ -1,18 +1,23 @@
 var gulp = require('gulp');
-var sass = require('gulp-ruby-sass');
-var minifyCss = require('gulp-minify-css');
+var sass = require('gulp-sass');
+var cleanCss = require('gulp-clean-css');
 var rename = require('gulp-rename');
-var uglify = require('gulp-uglify');
 
 gulp.task('sass', function () {
-    return sass('./src/amf.sass')
-        .pipe(rename({suffix: '.min'}))
-        .pipe(minifyCss({compatibility: 'ie8'}))
-        .pipe(gulp.dest('./dist'));
+    return gulp.src('./src/*.sass')
+      .pipe(sass().on('error', sass.logError))
+      .pipe(gulp.dest('./dist'));
+});
+
+gulp.task('clean-css', ['sass'], function() {
+    return gulp.src('./dist/*.css')
+      .pipe(cleanCss({compatibility: 'ie8'}))
+      .pipe(rename({suffix: '.min'}))
+      .pipe(gulp.dest('./dist'))
 });
 
 gulp.task('watch', function () {
     gulp.watch('./src/*.sass', ['sass']);
 });
 
-gulp.task('default', ['sass', 'copy-js']);
+gulp.task('default', ['sass', 'clean-css']);

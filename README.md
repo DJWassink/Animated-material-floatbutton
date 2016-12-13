@@ -5,7 +5,7 @@ A floating round material button that has animations between states.
 ![Animation](example/screenshot.gif)
 
 ## Demo
-[Click here](http://button.dirkjanwassink.nl)
+[Click here](http://dirkjanwassink.nl/button)
 
 ## States
 Currently the following icons/states are supported:
@@ -25,7 +25,9 @@ Currently the following icons/states are supported:
 * arrow-up
 
 ## Usage
-Either download/clone this repo or install it with bower:
+Either download/clone this repo or install it with yarn/npm or bower:<br>
+`yarn add animated-material-floatbutton`<br>
+`npm i animated-material-floatbutton -S`<br>
 `bower install animated-material-floatbutton`
 
 Simply use the following snippet:

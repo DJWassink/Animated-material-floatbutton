@@ -1,20 +1,21 @@
 {
   "name": "animated-material-button",
   "version": "1.0.0",
-  "description": "Simple material ripple effect in native js + css",
-  "main": " ",
+  "description": "A floating round material button that has animations between states.",
+  "main": "dist/amf.min.css",
   "directories": {
     "example": "example"
   },
   "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-minify-css": "^1.2.1",
     "gulp-rename": "^1.2.2",
-    "gulp-ruby-sass": "^2.0.4"
+    "gulp-clean-css": "^2.2.2",
+    "gulp-sass": "^3.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish": "npm run build",
+    "build": "rm -rf ./dist && ./node_modules/.bin/gulp"
   },
   "repository": {
     "type": "git",
