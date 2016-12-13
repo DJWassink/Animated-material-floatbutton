@@ -30,7 +30,7 @@ Either download/clone this repo or install it with bower:
 
 Simply use the following snippet:
 
-```
+```html
 <div class="animated-material-fab">
     <div class="icon-holder equals">
         <div class="icon-bar bar1"></div>
