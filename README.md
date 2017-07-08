@@ -5,7 +5,7 @@ A floating round material button that has animations between states.
 ![Animation](example/screenshot.gif)
 
 ## Demo
-[Click here](http://dirkjanwassink.nl/button)
+[Click here](http://djwassink.com/button)
 
 ## States
 Currently the following icons/states are supported:
